@@ -62,7 +62,7 @@ Pods/Deployments ─▶ kube-state ─┘         │
 ## Repository Structure
 
 ```
-observability-automation/
+eks-prometheus-grafana/
 ├── eks-monitoring/
 │   ├── main.tf              # EKS cluster, VPC, node group, IAM roles
 │   ├── variables.tf         # Input variables (region, cluster name, instance type)
@@ -174,9 +174,9 @@ aws sts get-identity
 ```bash
 sudo apt install -y git
 
-git clone https://github.com/Vickybarai/observability-automation.git
+git clone https://github.com/Vickybarai/eks-prometheus-grafana.git
 
-cd observability-automation
+cd eks-prometheus-grafana
 ls
 
 cd eks-monitoring
@@ -616,7 +616,7 @@ helm uninstall prometheus -n monitoring
 kubectl delete deployment nginx
 
 # 3. Destroy EKS cluster and all infrastructure
-cd ~/observability-automation/eks-monitoring
+cd ~/eks-prometheus-grafana/eks-monitoring
 terraform destroy --auto-approve
 ```
 
@@ -649,7 +649,7 @@ This project is for educational and demonstration purposes.
 
 ## Repository
 
-[https://github.com/Vickybarai/observability-automation](https://github.com/Vickybarai/observability-automation)
+[https://github.com/Vickybarai/eks-prometheus-grafana](https://github.com/Vickybarai/eks-prometheus-grafana)
 ```
 
 This is a complete, production-quality `README.md` file. Copy everything from the first `# Observability Automation` line onward and paste it directly into your `README.md` on GitHub. It covers:
